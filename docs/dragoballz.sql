@@ -2,9 +2,9 @@
 -- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 10-10-2023 a las 15:53:58
--- Versión del servidor: 10.2.14-MariaDB
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 11-10-2023 a las 14:55:21
+-- Versión del servidor: 5.7.21
 -- Versión de PHP: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";

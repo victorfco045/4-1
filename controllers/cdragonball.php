@@ -17,29 +17,15 @@ switch ($_GET["opt"]) {
         echo json_encode(["insert correcto"]);
         break;
     case "insert":
-        case "insert":
-            $personaje = $body['personaje'];
-            $raza = $body['raza'];
-            $categoria = $body['categoria'];
-            $poderes = $body['poderes'];
-        
-            $resultado = $DragonBallZ->insert_personaje($personaje, $raza, $categoria, $poderes);
-        
-            if ($resultado > 0) {
-                echo json_encode(["mensaje" => "Inserción correcta"]);
-            } else {
-                echo json_encode(["mensaje" => "Error al insertar"]);
-            }
-            break;
-        
+        $datos = $DragonBallZ->insert_personaje($body['idpersonaje'],$body['personaje'], $body['raza'], $body['poderes'], $body['categoria']);
+        echo json_encode(["insert correcto"]);
         break;
-
     case "update":
-        $datos=$DragonBallZ->update_personaje=($body['idpersonaje']($body[]));
-        echo json_encode(["Modificar correcto"]);
+            $datos = $DragonBallZ->update_personaje($idpersonaje, $personaje, $raza, $categoria, $poderes);
+            echo json_encode(["Eliminar correcto"]);
         break;
     case "delete":
-        $datos=$DragonBallZ->delete_personaje=($body['idpersonaje'])
+        $datos = $DragonBallZ->delete_personaje($idpersonaje);
         echo json_encode(["Eliminar correcto"]);
     break;
     

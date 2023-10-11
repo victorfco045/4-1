@@ -29,7 +29,7 @@ class dragonballz extends Conectar {
         $sql->bindValue(3, $categoria);
         $sql->bindValue(4, $poderes);
         $sql->execute();
-        return $sql->rowCount(); // Devuelve el número de filas afectadas por la inserción
+        return $sql->rowCount();
     }
 
     public function update_personaje($idpersonaje, $personaje, $raza, $categoria, $poderes) {
@@ -54,6 +54,25 @@ class dragonballz extends Conectar {
         $sql->bindValue(1, $idpersonaje);
         $sql->execute();
         return $sql->rowCount(); 
+    }
+    public function get_personake_id($idpersonaje){
+        $conectar = parent::Conexion();
+        parent::set_names();
+        $sql="SELECT * FROM personajes WHERE idPersonaje = ?";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1,$idpersonaje);
+        $sql->execute();
+        return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function get_personaje($personaje){
+        $conectar = parent::Conexion();
+        parent::set_names();
+        $sql="SELECT * FROM personajes WHERE Personaje = ?";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1,$personaje);
+        $sql->execute();
+        return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 ?>
