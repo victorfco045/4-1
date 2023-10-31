@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `dragoballz`
+-- Base de datos: `dragonballz`
 --
 
 -- --------------------------------------------------------
@@ -30,12 +30,14 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `personajes`;
 CREATE TABLE IF NOT EXISTS `personajes` (
-  `idpersonajes` int(11) NOT NULL,
+  `idpersonajes` int(11) NOT NULL AUTO_INCREMENT,
   `personajes` varchar(128) NOT NULL,
   `Raza` varchar(128) NOT NULL,
   `Poderes` varchar(128) NOT NULL,
-  `Categoria` varchar(128) NOT NULL
+  `Categoria` varchar(128) NOT NULL,
+  PRIMARY KEY (`idpersonajes`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Volcado de datos para la tabla `personajes`
